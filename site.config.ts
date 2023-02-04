@@ -2,24 +2,25 @@ import { siteConfig } from './lib/site-config'
 
 export default siteConfig({
   // the site's root Notion page (required)
-  rootNotionPageId: '7875426197cf461698809def95960ebf',
+  rootNotionPageId: '6cbbdaa9b8884ec49876a45e568da0ff',
 
   // if you want to restrict pages to a single notion workspace (optional)
   // (this should be a Notion ID; see the docs for how to extract this)
   rootNotionSpaceId: null,
 
   // basic site info (required)
-  name: 'Next.js Notion Starter Kit',
-  domain: 'nextjs-notion-starter-kit.transitivebullsh.it',
-  author: 'Travis Fischer',
+  name: 'NgoSoeng 我想',
+  domain: 'ngosoeng.com',
+  author: 'NgoSoeng',
 
   // open graph metadata (optional)
-  description: 'Example Next.js Notion Starter Kit Site',
+  description: '記錄每個21克的故事',
 
   // social usernames (optional)
-  twitter: 'transitive_bs',
-  github: 'transitive-bullshit',
-  linkedin: 'fisch2',
+  // (hide) twitter: '',
+  // (hide) github: '',
+  // (hide) linkedin: '',
+  
   // mastodon: '#', // optional mastodon profile URL, provides link verification
   // newsletter: '#', // optional newsletter URL
   // youtube: '#', // optional youtube channel name or `channel/UCGbXXXXXXXXXXXXXXXXXXXXXX`
@@ -42,24 +43,32 @@ export default siteConfig({
   // any pages defined here will override their default URL paths
   // example:
   //
-  // pageUrlOverrides: {
-  //   '/foo': '067dd719a912471ea9a3ac10710e7fdf',
-  //   '/bar': '0be6efce9daf42688f65c76b89f8eb27'
-  // }
+  pageUrlOverrides: {
+    '/about-page': '46cb45f03b2e491da1a170c9c2cde4d6',
+    '/about-me': '4f500097a9c0491a84b20604a32aa448'
+    '/topic': '9eba45d6d50c4a19a5271caafe20db5c'
+    '/all': '883c47b0802b435880495eb991da9547'
+  }
   pageUrlOverrides: null,
 
   // whether to use the default notion navigation style or a custom one with links to
   // important pages
-  navigationStyle: 'default'
-  // navigationStyle: 'custom',
-  // navigationLinks: [
-  //   {
-  //     title: 'About',
-  //     pageId: 'f1199d37579b41cbabfc0b5174f4256a'
-  //   },
-  //   {
-  //     title: 'Contact',
-  //     pageId: '6a29ebcb935a4f0689fe661ab5f3b8d1'
-  //   }
-  // ]
+  // navigationStyle: 'default'
+  navigationStyle: 'custom',
+  navigationLinks: [
+    {
+      title: '關於NgoSoeng',
+      pageId: '46cb45f03b2e491da1a170c9c2cde4d6'
+    },
+    {
+      title: '自我介紹',
+      pageId: '4f500097a9c0491a84b20604a32aa448'
+    }
+      title: '所有主題',
+      pageId: '9eba45d6d50c4a19a5271caafe20db5c'
+    }
+      title: '全部',
+      pageId: '883c47b0802b435880495eb991da9547'
+    }
+  ]
 })
