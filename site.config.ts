@@ -63,10 +63,12 @@ export default siteConfig({
     {
       title: '自我介紹',
       pageId: '4f500097a9c0491a84b20604a32aa448'
-    }
+    },
+    {
       title: '所有主題',
       pageId: '9eba45d6d50c4a19a5271caafe20db5c'
-    }
+    },
+    {
       title: '全部',
       pageId: '883c47b0802b435880495eb991da9547'
     }
